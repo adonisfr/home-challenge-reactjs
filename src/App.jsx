@@ -11,7 +11,6 @@ function App() {
   }, []);
 
   const handleOnClick = (id) => {
-    console.log(id);
     fetch(`https://jsonplaceholder.typicode.com/posts/?userId=${id}`)
       .then((response) => response.json())
       .then((json) => setPosts(json));
@@ -67,6 +66,14 @@ function App() {
           </tbody>
         </table>
       )}
+      <div className="mt-6">
+        <a
+          className="text-blue-400"
+          href="https://adonisfr.github.io/home-challenge-vanillaJS/"
+        >
+          Vanilla JS version
+        </a>
+      </div>
     </div>
   );
 }
